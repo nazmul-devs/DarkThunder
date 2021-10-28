@@ -10,11 +10,11 @@ function App() {
 		<Router>
 			<Header />
 			<Switch>
-				<Route to="/admin">
-					<Admin />
-				</Route>
 				<Route exact to="/">
 					<Home />
+				</Route>
+				<Route to="/admin">
+					<Admin />
 				</Route>
 			</Switch>
 		</Router>
