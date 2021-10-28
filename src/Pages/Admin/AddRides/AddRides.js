@@ -10,8 +10,15 @@ const AddRides = () => {
 		formState: { errors },
 		reset,
 	} = useForm();
+	// data add handle
 	const onSubmit = (data) => {
-		console.log(data);
+		fetch("http://localhost:5000/rides", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		}).then((res) => res.json());
 		reset();
 		alert("Ride added");
 	};
