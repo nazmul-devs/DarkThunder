@@ -1,0 +1,11 @@
+.rides-add-form input {
+	margin: 20px;
+	padding: 7px 20px;
+}
+.rides-btn {
+	width: 200px;
+	border: none;
+	background: lightblue;
+	font-weight: 600;
+	font-size: 20px;
+}
