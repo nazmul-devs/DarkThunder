@@ -4,10 +4,15 @@ import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import gLogo from "../../img/google-logo.png";
 import UseAuth from "../../Hooks/UseAuth";
+import { useHistory, useLocation } from "react-router";
 
 const Login = () => {
 	const { googleLogin, user } = UseAuth();
-	console.log(user);
+	const location = useLocation();
+	const redirect_uri = location.state?.from || "/";
+	const history = useHistory();
+	console.log("came from ", location.state?.from);
+
 	const {
 		register,
 		handleSubmit,
@@ -15,6 +20,13 @@ const Login = () => {
 	} = useForm();
 	const onSubmit = (data) => {
 		console.log(data);
+	};
+
+	// Google login handle with redirect path
+	const handleGoogleLogin = () => {
+		googleLogin().then((result) => {
+			history.push(redirect_uri);
+		});
 	};
 	return (
 		<Container>
@@ -40,7 +52,7 @@ const Login = () => {
 				/>
 				<p className="text-muted text-center">Or login with</p>
 				<button
-					onClick={googleLogin}
+					onClick={handleGoogleLogin}
 					className="google-btn mx-auto mb-3 p-1 rounded "
 				>
 					{" "}

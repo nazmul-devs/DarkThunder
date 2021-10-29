@@ -17,7 +17,7 @@ const UseFirebase = () => {
 	const [user, setUser] = useState({});
 
 	const googleLogin = () => {
-		signInWithPopup(auth, provider).then((result) => {});
+		return signInWithPopup(auth, provider);
 	};
 
 	// onAuthStateChange
