@@ -1,3 +1,13 @@
 img {
 	object-fit: cover;
 }
+
+/* Google btn */
+.google-btn {
+	background: #4285f4;
+	border: none;
+
+	font-size: 19px;
+	color: #fff;
+	min-width: 180px;
+}

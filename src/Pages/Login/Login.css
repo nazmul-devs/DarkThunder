@@ -1,0 +1,14 @@
+.register-btn {
+	background: #dc0000;
+	color: #fff;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.login-form input {
+	margin: 20px;
+	padding: 10px 20px;
+	border: none;
+	box-shadow: 2px 2px 10px lightgray;
+	border-radius: 20px;
+}
