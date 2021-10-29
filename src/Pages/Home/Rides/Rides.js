@@ -2,9 +2,17 @@ import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import UseRides from "../../../Hooks/UseRides";
+import loader from "../../../img/Fidget-spinner.gif";
 
 const Rides = () => {
-	const { rides } = UseRides();
+	const { rides, loading } = UseRides();
+	if (loading) {
+		return (
+			<div className="mx-auto text-center my-5">
+				<img src={loader} alt="" />
+			</div>
+		);
+	}
 	return (
 		<Container>
 			<Row xs={1} sm={2} md={3} className="g-4">
