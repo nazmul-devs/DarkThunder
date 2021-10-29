@@ -12,3 +12,16 @@
 	box-shadow: 2px 2px 10px lightgray;
 	border-radius: 20px;
 }
+
+/* Google btn */
+.google-btn {
+	background: #4285f4;
+	border: none;
+
+	font-size: 19px;
+	color: #fff;
+	min-width: 180px;
+}
+.google-btn:hover {
+	background: #1451b3;
+}

@@ -3,8 +3,10 @@ import "./Login.css";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import gLogo from "../../img/google-logo.png";
+import UseFirebase from "../../Firebase/UseFirebase";
 
 const Login = () => {
+	const { googleLogin, user, logOut } = UseFirebase();
 	const {
 		register,
 		handleSubmit,
@@ -36,7 +38,10 @@ const Login = () => {
 					value="Register"
 				/>
 				<p className="text-muted text-center">Or login with</p>
-				<button className="google-btn mx-auto mb-3 p-1 rounded ">
+				<button
+					onClick={googleLogin}
+					className="google-btn mx-auto mb-3 p-1 rounded "
+				>
 					{" "}
 					<div className="d-flex align-items-center me-3">
 						<img
