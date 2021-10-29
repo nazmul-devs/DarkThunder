@@ -5,23 +5,27 @@ import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home";
 import Admin from "./Pages/Admin/Admin";
 import Login from "./Pages/Login/Login";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+import AuthProvider from "./Hooks/AuthProvider";
 
 function App() {
 	return (
-		<BrowserRouter>
-			<Header />
-			<Switch>
-				<Route exact path="/">
-					<Home />
-				</Route>
-				<Route path="/admin">
-					<Admin />
-				</Route>
-				<Route path="/login">
-					<Login />
-				</Route>
-			</Switch>
-		</BrowserRouter>
+		<AuthProvider>
+			<BrowserRouter>
+				<Header />
+				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
+					<PrivateRoute path="/admin">
+						<Admin />
+					</PrivateRoute>
+					<Route path="/login">
+						<Login />
+					</Route>
+				</Switch>
+			</BrowserRouter>
+		</AuthProvider>
 	);
 }
 

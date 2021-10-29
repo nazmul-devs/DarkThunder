@@ -3,10 +3,11 @@ import "./Login.css";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import gLogo from "../../img/google-logo.png";
-import UseFirebase from "../../Firebase/UseFirebase";
+import UseAuth from "../../Hooks/UseAuth";
 
 const Login = () => {
-	const { googleLogin, user, logOut } = UseFirebase();
+	const { googleLogin, user } = UseAuth();
+	console.log(user);
 	const {
 		register,
 		handleSubmit,

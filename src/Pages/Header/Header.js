@@ -24,8 +24,8 @@ const Header = () => {
 							<>
 								<img
 									src={user?.photoURL}
-									className="rounded-circle"
-									width="100"
+									className="rounded-circle ms-5"
+									width="50"
 									alt=""
 								/>
 								<button
