@@ -14,6 +14,7 @@ const provider = new GoogleAuthProvider();
 const auth = getAuth();
 
 const UseFirebase = () => {
+	const [loading, setLoading] = useState(true);
 	const [user, setUser] = useState({});
 
 	const googleLogin = () => {
@@ -27,16 +28,20 @@ const UseFirebase = () => {
 				setUser(user);
 			} else {
 			}
+			setLoading(false);
 		});
 	});
 
 	// logout handle
 	const logOut = () => {
-		signOut(auth).then(() => {
-			setUser({});
-		});
+		setLoading(true);
+		signOut(auth)
+			.then(() => {
+				setUser({});
+			})
+			.finally(() => setLoading(false));
 	};
-	return { googleLogin, user, logOut };
+	return { googleLogin, user, logOut, loading };
 };
 
 export default UseFirebase;

@@ -7,11 +7,10 @@ import UseAuth from "../../Hooks/UseAuth";
 import { useHistory, useLocation } from "react-router";
 
 const Login = () => {
-	const { googleLogin, user } = UseAuth();
+	const { googleLogin } = UseAuth();
 	const location = useLocation();
 	const redirect_uri = location.state?.from || "/";
 	const history = useHistory();
-	console.log("came from ", location.state?.from);
 
 	const {
 		register,
