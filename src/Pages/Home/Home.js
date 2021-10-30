@@ -4,13 +4,10 @@ import Rides from "./Rides/Rides";
 
 const Home = () => {
 	return (
-		<>
+		<div className="container-fluid" style={{ background: "#ebf8ff" }}>
 			<Banner />
 			<Rides />
-			<div>
-				<h2>This is home</h2>
-			</div>
-		</>
+		</div>
 	);
 };
 
