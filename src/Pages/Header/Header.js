@@ -2,24 +2,44 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import UseFirebase from "../../Firebase/UseFirebase";
+import logo from "../../img/header-logo.png";
 
 const Header = () => {
 	const { user, logOut } = UseFirebase();
 	return (
-		<Navbar bg="light" expand="lg">
+		<Navbar bg="dark" className="shadow text-white" expand="lg">
 			<Container>
 				<Navbar.Brand as={Link} to="/">
-					dark thunder
+					<img src={logo} width="100" alt="" />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ms-auto">
-						<Nav.Link as={Link} to="/">
-							Home
-						</Nav.Link>
-						<Nav.Link as={Link} to="/admin">
-							Admin
-						</Nav.Link>
+						{user.email && (
+							<>
+								<Nav.Link
+									className=" text-white fw-bold"
+									as={Link}
+									to="/orders"
+								>
+									My orders
+								</Nav.Link>
+								<Nav.Link
+									className=" text-white fw-bold"
+									as={Link}
+									to="/manageorders"
+								>
+									Mange orders
+								</Nav.Link>
+								<Nav.Link
+									className=" text-white fw-bold"
+									as={Link}
+									to="/admin"
+								>
+									Admin
+								</Nav.Link>
+							</>
+						)}
 						{user.email ? (
 							<>
 								<img
@@ -36,7 +56,11 @@ const Header = () => {
 								</button>
 							</>
 						) : (
-							<Nav.Link as={Link} to="/login">
+							<Nav.Link
+								as={Link}
+								className="fw-5 fw-bold text-white "
+								to="/login"
+							>
 								Login
 							</Nav.Link>
 						)}

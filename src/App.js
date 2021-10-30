@@ -7,6 +7,8 @@ import Admin from "./Pages/Admin/Admin";
 import Login from "./Pages/Login/Login";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import AuthProvider from "./Hooks/AuthProvider";
+import MyOrders from "./Pages/MyOrders/MyOrders";
+import ManageOrders from "./Pages/ManageOrders/ManageOrders";
 
 function App() {
 	return (
@@ -19,6 +21,12 @@ function App() {
 					</Route>
 					<PrivateRoute path="/admin">
 						<Admin />
+					</PrivateRoute>
+					<PrivateRoute path="/orders">
+						<MyOrders />
+					</PrivateRoute>
+					<PrivateRoute path="/manageorders">
+						<ManageOrders/>
 					</PrivateRoute>
 					<Route path="/login">
 						<Login />
