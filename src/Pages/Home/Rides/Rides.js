@@ -25,7 +25,6 @@ const Rides = () => {
 			img: bookingRide.img,
 			price: bookingRide.price,
 		};
-		console.log(bookingItem);
 
 		fetch("https://frozen-anchorage-61563.herokuapp.com/orders", {
 			method: "POST",
@@ -42,7 +41,7 @@ const Rides = () => {
 	return (
 		<Container>
 			<Row xs={1} sm={2} md={3} className="g-4">
-				{rides.map((ride, index) => (
+				{rides?.map((ride, index) => (
 					<Col key={ride._id}>
 						<Card>
 							<Card.Img variant="top" src={ride.img} height="250" />
@@ -61,7 +60,7 @@ const Rides = () => {
 								) : (
 									<Link to="/login">
 										<button className="btn btn-danger">
-											Booking ride
+											book now
 										</button>
 									</Link>
 								)}

@@ -12,7 +12,7 @@ const AddRides = () => {
 	} = useForm();
 	// data add handle
 	const onSubmit = (data) => {
-		fetch("http://localhost:5000/rides", {
+		fetch("https://frozen-anchorage-61563.herokuapp.com/rides", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

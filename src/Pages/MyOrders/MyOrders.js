@@ -1,21 +1,15 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import UseAuth from "../../Hooks/UseAuth";
 import { useForm } from "react-hook-form";
+import UseRides from "../../Hooks/UseRides";
 
 const MyOrders = () => {
-	const [remove, setRemove] = useState(false);
-	const [myOrders, setMyOrders] = useState([]);
+	const { myOrders, handleDelete, status } = UseRides();
+
 	const { user } = UseAuth();
-	const email = user?.email;
-	useEffect(() => {
-		fetch(`http://localhost:5000/orders/${email}`)
-			.then((res) => res.json())
-			.then((data) => {
-				setMyOrders(data);
-			});
-	}, [remove]);
+	const orderName = [];
+	myOrders.map((order) => orderName.push(order.name));
 
 	// reack hook form
 	const {
@@ -24,34 +18,24 @@ const MyOrders = () => {
 		formState: { errors },
 		reset,
 	} = useForm();
-	// data add handle
+
+	// handle purchase
 	const onSubmit = (data) => {
-		console.log(data);
+		data.status = "Pending";
+		data.rides = orderName;
+		fetch("https://frozen-anchorage-61563.herokuapp.com/purchase", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		})
+			.then((res) => res.json())
+			.then((result) => {});
 		reset();
 		alert("Your purchese successfully done");
 	};
 
-	// handle delete ride
-	const handleDelete = (id) => {
-		const response = window.confirm(
-			"Are you sure this ride remove from your order ? "
-		);
-		if (response) {
-			setRemove(false);
-			fetch(`http://localhost:5000/myorders/${id}`, {
-				method: "DELETE",
-				headers: {
-					"Content-Type": "application/json",
-				},
-			})
-				.then((res) => res.json())
-				.then((data) => {
-					setRemove(true);
-					alert("This ride is remove from your order");
-				});
-		} else {
-		}
-	};
 	return (
 		<Container>
 			{myOrders.length ? <h2>my booking</h2> : <h2>You have no booking </h2>}
@@ -88,22 +72,55 @@ const MyOrders = () => {
 				</Col>
 				<Col>
 					<div className="parchese">
+						{status && (
+							<div>
+								{status === "Pending" ? (
+									<h4 className="text-center fw-bold shadow py-2 rounded-pill bg-warning text-white px-2">
+										Your order is {status} ...
+									</h4>
+								) : (
+									<h4 className="text-center fw-bold shadow p-2 rounded-pill bg-success text-white">
+										Your order is {status}{" "}
+										<i className="fas fa-check"></i>
+									</h4>
+								)}
+							</div>
+						)}
 						<form
 							className="d-flex flex-column p-3 my-5 mx-auto shadow"
 							onSubmit={handleSubmit(onSubmit)}
 						>
 							<h2>User add</h2>
-							<input placeholder="Name" {...register("name")} />
-							<input placeholder="Description" {...register("des")} />
-							<input placeholder="Price" {...register("price")} />
 							<input
-								placeholder="Img"
-								{...register("img", { required: true })}
+								defaultValue={user.displayName}
+								placeholder="Name"
+								{...register("name")}
+							/>
+							<input
+								defaultValue={user.email}
+								placeholder="email"
+								{...register("email")}
+							/>
+							<input
+								placeholder="Address"
+								{...register("address", { required: true })}
+							/>
+							<input
+								placeholder="City"
+								{...register("city", { required: true })}
+							/>
+							<input
+								placeholder="Phone no"
+								{...register("phone", { required: true })}
 							/>
 							{errors.exampleRequired && (
 								<span>This field is required</span>
 							)}
-							<input className="rides-btn" type="submit" value="Add" />
+							<input
+								className="rides-btn"
+								type="submit"
+								value="booking"
+							/>
 						</form>
 					</div>
 				</Col>

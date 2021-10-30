@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import UseFirebase from "../../Firebase/UseFirebase";
+import UseRides from "../../Hooks/UseRides";
 import logo from "../../img/header-logo.png";
 
 const Header = () => {
@@ -12,40 +13,43 @@ const Header = () => {
 				<Navbar.Brand as={Link} to="/">
 					<img src={logo} width="100" alt="" />
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Toggle
+					className="bg-white text-secondary"
+					aria-controls="basic-navbar-nav"
+				/>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="ms-auto">
 						{user.email && (
-							<>
+							<div className="d-lg-flex align-items-center me-5">
 								<Nav.Link
 									className=" text-white fw-bold"
 									as={Link}
 									to="/orders"
 								>
-									My orders
+									My Orders
 								</Nav.Link>
 								<Nav.Link
 									className=" text-white fw-bold"
 									as={Link}
 									to="/manageorders"
 								>
-									Mange orders
+									Mange Orders
 								</Nav.Link>
 								<Nav.Link
 									className=" text-white fw-bold"
 									as={Link}
 									to="/admin"
 								>
-									Admin
+									Add A New Ride
 								</Nav.Link>
-							</>
+							</div>
 						)}
 						{user.email ? (
-							<>
+							<div className=" ms-5 ms-auto">
 								<img
 									src={user?.photoURL}
-									className="rounded-circle ms-5"
-									width="50"
+									className="rounded-circle"
+									width="55"
 									alt=""
 								/>
 								<button
@@ -54,7 +58,7 @@ const Header = () => {
 								>
 									Logout
 								</button>
-							</>
+							</div>
 						) : (
 							<Nav.Link
 								as={Link}

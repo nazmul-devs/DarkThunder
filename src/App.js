@@ -9,6 +9,8 @@ import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import AuthProvider from "./Hooks/AuthProvider";
 import MyOrders from "./Pages/MyOrders/MyOrders";
 import ManageOrders from "./Pages/ManageOrders/ManageOrders";
+import Footer from "./Pages/Footer/Footer";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
 	return (
@@ -26,12 +28,16 @@ function App() {
 						<MyOrders />
 					</PrivateRoute>
 					<PrivateRoute path="/manageorders">
-						<ManageOrders/>
+						<ManageOrders />
 					</PrivateRoute>
 					<Route path="/login">
 						<Login />
 					</Route>
+					<Route path="*">
+						<NotFound />
+					</Route>
 				</Switch>
+				<Footer />
 			</BrowserRouter>
 		</AuthProvider>
 	);
