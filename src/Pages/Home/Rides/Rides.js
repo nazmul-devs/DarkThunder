@@ -19,14 +19,20 @@ const Rides = () => {
 	// orders save to database
 	const handleBookin = (index) => {
 		const bookingRide = rides[index];
-		bookingRide.email = user.email;
+		const bookingItem = {
+			name: bookingRide.name,
+			email: user.email,
+			img: bookingRide.img,
+			price: bookingRide.price,
+		};
+		console.log(bookingItem);
 
 		fetch("https://frozen-anchorage-61563.herokuapp.com/orders", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",
 			},
-			body: JSON.stringify(bookingRide),
+			body: JSON.stringify(bookingItem),
 		})
 			.then((res) => res.json())
 			.then((data) => {
