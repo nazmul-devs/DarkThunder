@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import UseFirebase from "../../Firebase/UseFirebase";
-import UseRides from "../../Hooks/UseRides";
 import logo from "../../img/header-logo.png";
 
 const Header = () => {
@@ -11,7 +10,12 @@ const Header = () => {
 		<Navbar bg="dark" className="shadow text-white" expand="lg">
 			<Container>
 				<Navbar.Brand as={Link} to="/">
-					<img src={logo} width="100" alt="" />
+					<img
+						className="bg-light rounded"
+						src={logo}
+						width="100"
+						alt=""
+					/>
 				</Navbar.Brand>
 				<Navbar.Toggle
 					className="bg-white text-secondary"
