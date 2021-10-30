@@ -106,15 +106,24 @@ const UseRides = () => {
 
 	// Delete purchase data
 	const purchaseDelete = (email) => {
-		setRemove(false);
-		fetch(`https://frozen-anchorage-61563.herokuapp.com/purchase/${email}`, {
-			method: "DELETE",
-			headers: {
-				"Content-Type": "application/json",
-			},
-		}).then(() => {
-			setRemove(true);
-		});
+		const response = window.confirm(
+			"Are you sure remove this order from booking ? "
+		);
+		if (response) {
+			setRemove(false);
+			fetch(
+				`https://frozen-anchorage-61563.herokuapp.com/purchase/${email}`,
+				{
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json",
+					},
+				}
+			).then(() => {
+				setRemove(true);
+			});
+		} else {
+		}
 	};
 	return {
 		rides,

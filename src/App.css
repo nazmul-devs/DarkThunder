@@ -1,3 +1,23 @@
+/* Google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+	font-family: "Poppins", sans-serif;
+}
+
 img {
 	object-fit: cover;
+}
+
+/* banner text */
+.banner-text > h3 {
+	font-size: 65px;
+	font-weight: 700;
+	text-shadow: 1px 1px 5px #2c2c2c;
+}
+.banner-text > p {
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 60px;
+	text-shadow: 1px 1px 5px #2c2c2c;
 }

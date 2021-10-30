@@ -9,12 +9,12 @@ const Banner = () => {
 		<Carousel fade>
 			<Carousel.Item>
 				<img
-					height="640"
+					height="600"
 					className="d-block w-100"
 					src={banner1}
 					alt="First slide"
 				/>
-				<Carousel.Caption>
+				<Carousel.Caption className="banner-text">
 					<h3>Tilt-A-Whirl</h3>
 					<p>
 						In 1926, Herbert Sellner finished his design for the
@@ -24,13 +24,13 @@ const Banner = () => {
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
-					height="640"
+					height="600"
 					className="d-block w-100"
 					src={banner2}
 					alt="Second slide"
 				/>
 
-				<Carousel.Caption>
+				<Carousel.Caption className="banner-text">
 					<h3>Carousel</h3>
 					<p>
 						The most elegant of all amusement park rides, the carousel
@@ -41,13 +41,13 @@ const Banner = () => {
 			</Carousel.Item>
 			<Carousel.Item>
 				<img
-					height="640"
+					height="600"
 					className="d-block w-100"
 					src={banner3}
 					alt="Third slide"
 				/>
 
-				<Carousel.Caption>
+				<Carousel.Caption className="banner-text">
 					<h3>Log Rides</h3>
 					<p>
 						If you were a lumberjack in America in the late 1800s, a "log
