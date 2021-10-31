@@ -1,13 +1,13 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import "./Pricing.css";
 
 const Pricing = () => {
 	return (
 		<Container>
 			<h2 className="main-heading">Pricing</h2>
-			<div className="pricing d-md-flex align-items-center justify-content-around pb-5">
-				<div className="tickit-package">
+			<Row className="pricing d-md-flex align-items-center justify-content-around pb-5">
+				<Col className="tickit-package">
 					<h5>TICKET PACKAGES</h5>
 					<h3>CHOOSE THE BEST PACKAGES FOR YOUR FAMILY</h3>
 					<p>
@@ -31,8 +31,8 @@ const Pricing = () => {
 						Tickets
 					</p>
 					<button className="all-package">all package</button>
-				</div>
-				<div className="family-package">
+				</Col>
+				<Col className="family-package">
 					<h3 className="fw-bold">Family Packages</h3>
 					<div className="d-flex fw-bold justify-content-center pricing">
 						<h3>$299,90</h3>{" "}
@@ -56,8 +56,8 @@ const Pricing = () => {
 						<i className="fas fa-check"></i> Free Four Towels
 					</p>
 					<button className="book-now-btn">Book now</button>
-				</div>
-				<div className="basic-package">
+				</Col>
+				<Col className="basic-package">
 					<h3 className="fw-bold">Basic Packages</h3>
 					<div className="d-flex fw-bold justify-content-center pricing">
 						<h3>$59,90</h3>{" "}
@@ -82,8 +82,8 @@ const Pricing = () => {
 						Free Towel
 					</p>
 					<button className="book-now">Book now</button>
-				</div>
-			</div>
+				</Col>
+			</Row>
 		</Container>
 	);
 };

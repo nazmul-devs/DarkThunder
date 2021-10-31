@@ -42,7 +42,7 @@ const Rides = () => {
 	return (
 		<Container className="pb-5">
 			<h2 className="main-heading">Ride booking</h2>
-			<Row xs={1} sm={2} md={3} className="g-4">
+			<Row xs={1} md={2} lg={3} className="g-4">
 				{rides?.map((ride, index) => (
 					<Col key={ride._id}>
 						<Card className="border-0 shadow ride-card">

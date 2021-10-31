@@ -14,7 +14,7 @@ const Banner = () => {
 					src={banner1}
 					alt="First slide"
 				/>
-				<Carousel.Caption className="banner-text">
+				<Carousel.Caption className="banner-text d-none d-md-block">
 					<h3>Tilt-A-Whirl</h3>
 					<p>
 						In 1926, Herbert Sellner finished his design for the
@@ -30,7 +30,7 @@ const Banner = () => {
 					alt="Second slide"
 				/>
 
-				<Carousel.Caption className="banner-text">
+				<Carousel.Caption className="banner-text  d-none d-md-block">
 					<h3>Carousel</h3>
 					<p>
 						The most elegant of all amusement park rides, the carousel
@@ -47,7 +47,7 @@ const Banner = () => {
 					alt="Third slide"
 				/>
 
-				<Carousel.Caption className="banner-text">
+				<Carousel.Caption className="banner-text  d-none d-md-block">
 					<h3>Log Rides</h3>
 					<p>
 						If you were a lumberjack in America in the late 1800s, a "log

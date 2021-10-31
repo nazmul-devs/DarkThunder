@@ -6,7 +6,7 @@ import { Form } from "react-bootstrap";
 const Footer = () => {
 	return (
 		<div className="container-fluid footer">
-			<div className="d-flex p-2 justify-content-around align-items-center">
+			<div className="d-md-flex p-2 justify-content-around align-items-center">
 				<div className="dark-thunder my-3">
 					<img
 						className="bg-light m-2 rounded"
@@ -23,7 +23,7 @@ const Footer = () => {
 							<i className="fab fa-twitter bg-white rounded-circle p-2 m-2"></i>
 						</a>
 						<a href="#">
-							<i class="fab fa-instagram  bg-white rounded-circle p-2 m-2"></i>
+							<i className="fab fa-instagram  bg-white rounded-circle p-2 m-2"></i>
 						</a>
 					</div>
 				</div>

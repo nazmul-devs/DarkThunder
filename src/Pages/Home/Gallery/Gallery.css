@@ -17,3 +17,11 @@
 	grid-column: 3 / 4;
 	grid-row: 2 / 4;
 }
+
+/* responsive */
+@media only screen and (max-width: 800px) {
+	.grid-contaier {
+		display: flex;
+		flex-direction: column;
+	}
+}
