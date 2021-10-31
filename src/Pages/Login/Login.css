@@ -1,8 +1,11 @@
 .register-btn {
-	background: #dc0000;
+	background: #1451b3;
 	color: #fff;
 	font-weight: 600;
 	text-transform: uppercase;
+}
+.register-btn:hover {
+	background: #4285f4;
 }
 
 .login-form input {

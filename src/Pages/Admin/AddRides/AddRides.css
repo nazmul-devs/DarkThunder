@@ -1,6 +1,16 @@
-.rides-add-form input {
+.rides-add {
+	background: #34495e;
+}
+.rides-add-form input,
+textarea {
 	margin: 20px;
-	padding: 7px 20px;
+	padding: 10px 20px;
+	border-radius: 7px;
+	border: none;
+	box-shadow: 1px 1px 8px #34495e74;
+}
+.rides-add-form form {
+	max-width: 500px;
 }
 .rides-btn {
 	width: 200px;
@@ -8,4 +18,15 @@
 	background: lightblue;
 	font-weight: 600;
 	font-size: 20px;
+}
+
+/* add ride btn */
+.add-ride-btn {
+	font-weight: bold;
+	color: #fff;
+	background: #34495e;
+	transition: 0.2s;
+}
+.add-ride-btn:hover {
+	background: #2e4053;
 }
