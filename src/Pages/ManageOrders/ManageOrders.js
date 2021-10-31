@@ -29,33 +29,41 @@ const ManageOrders = () => {
 
 	return (
 		<Container>
-			<h2>Mange orders {allOrders.length}</h2>
-			<Row>
+			<Row className="mb-4">
 				<Col>
-					<Row xs={1} lg={2} className="g-4">
+					<Row xs={1} className="g-4 mt-3">
+						<h2 className="main-heading">
+							Total booking rides {allOrders.length}
+						</h2>
 						{allOrders?.map((order, index) => (
 							<Col key={order._id}>
-								<Card>
+								<Card style={{ background: "#2E4053" }}>
 									<Card.Img
 										variant="top"
 										src={order.img}
 										height="250"
 									/>
 									<Card.Body>
-										<div className="text-uppercase text-center my-2 fw-bold">
-											<h2 className="text-center fw-bold">
-												{order.name}
-											</h2>
-											<p>Price : ${order.price}</p>
-											<p>Email : {order.email}</p>
+										<div className="d-flex justify-content-around align-items-center">
+											<div className="text-uppercase text-white  my-2">
+												<h2>{order.name}</h2>
+
+												<p>Email : {order.email}</p>
+											</div>
+											<div>
+												<button className="btn btn-danger me-2">
+													Update
+												</button>
+												<button
+													onClick={() =>
+														manageOrderDelete(order._id)
+													}
+													className="btn btn-danger"
+												>
+													X
+												</button>
+											</div>
 										</div>
-										<button
-											onClick={() => manageOrderDelete(order._id)}
-											className="btn btn-danger"
-										>
-											X
-										</button>
-										<button className="btn btn-danger">Update</button>
 									</Card.Body>
 								</Card>
 							</Col>
@@ -63,21 +71,24 @@ const ManageOrders = () => {
 					</Row>
 				</Col>
 				<Col>
-					<h2>hellsdfih</h2>
-					<h2>purchase {purchase.length}</h2>
-					<Row>
+					<Row className=" text-center ">
+						<h2 className="main-heading">
+							Ordered user {purchase.length}
+						</h2>
 						{purchase?.map((prch) => (
-							<Col key={prch._id}>
-								<h5>Name : {prch.name}</h5>
-								<h5>Email : {prch.email}</h5>
+							<Col key={prch._id} className="shadow p-4 m-5 rounded">
+								<h5 className="fw-bold">Name : {prch.name}</h5>
+								<h5 className="fw-bold">Email : {prch.email}</h5>
 								<div className="rides">
-									{prch.rides?.map((ride) => (
-										<p key={ride}>{ride}</p>
+									{prch.rides?.map((ride, index) => (
+										<p key={ride}>
+											{index + 1} : {ride}
+										</p>
 									))}
 								</div>
 								<button
 									onClick={() => approveHandle(prch.email)}
-									className="btn btn-primary"
+									className="btn btn-primary me-3"
 								>
 									Approve
 								</button>
