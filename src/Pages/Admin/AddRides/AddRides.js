@@ -12,14 +12,13 @@ const AddRides = () => {
 	} = useForm();
 	// data add handle
 	const onSubmit = (data) => {
-		// fetch("https://frozen-anchorage-61563.herokuapp.com/rides", {
-		// 	method: "POST",
-		// 	headers: {
-		// 		"Content-Type": "application/json",
-		// 	},
-		// 	body: JSON.stringify(data),
-		// }).then((res) => res.json());
-		console.log(data);
+		fetch("https://frozen-anchorage-61563.herokuapp.com/rides", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		}).then((res) => res.json());
 		reset();
 		alert("Ride added");
 	};

@@ -35,7 +35,6 @@ const MyOrders = () => {
 		reset();
 		alert("Your purchese successfully done");
 	};
-	console.log(myOrders[0]);
 
 	return (
 		<div className="container-fluid pb-5" style={{ background: "#EAEDED" }}>
