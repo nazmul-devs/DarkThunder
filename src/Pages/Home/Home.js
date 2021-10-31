@@ -1,12 +1,14 @@
 import React from "react";
 import Banner from "./Banner/Banner";
+import Pricing from "./Pricing/Pricing";
 import Rides from "./Rides/Rides";
 
 const Home = () => {
 	return (
-		<div className="container-fluid" style={{ background: "#ebf8ff" }}>
+		<div style={{ background: "#ebf8ff" }}>
 			<Banner />
 			<Rides />
+			<Pricing />
 		</div>
 	);
 };

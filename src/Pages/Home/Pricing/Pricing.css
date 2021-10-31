@@ -1,0 +1,87 @@
+.pricing p {
+	color: #6e7e8d;
+}
+/* check mark color */
+.pricing .fas {
+	color: #3498db;
+	font-weight: 700;
+	margin-right: 10px;
+}
+.pricing button {
+	border: none;
+	padding: 12px 20px;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	transition: 0.2s;
+}
+
+.tickit-package {
+	max-width: 480px;
+	padding-right: 15px;
+}
+.tickit-package > h5 {
+	color: #3498db;
+	font-weight: bold;
+}
+.tickit-package > h3 {
+	color: #1c2833;
+	font-weight: 700;
+}
+
+/* family package style */
+.family-package {
+	background: #1c2833;
+	width: 550px;
+	text-align: center;
+	height: 500px;
+	padding-top: 20px;
+}
+.family-package h3,
+.basic-package h3 {
+	margin: 10px 0;
+	color: #fff;
+	text-align: center;
+}
+.family-package .pricing > h3 {
+	color: #3498db;
+	font-weight: bold;
+	margin: 20px 0;
+}
+
+/* basic package */
+.basic-package {
+	background: #3498db;
+	padding: 20px;
+	width: 450px;
+	height: 450px;
+}
+
+.basic-package .pricing > h3 {
+	color: #1c2833;
+	font-weight: 700;
+}
+.basic-package p {
+	color: lightgray;
+}
+
+.pricing .check {
+	color: #1c2833;
+}
+
+/* button */
+.all-package,
+.book-now-btn {
+	color: #fff;
+	background: #3498db;
+	margin-top: 15px;
+}
+.all-package:hover,
+.book-now-btn:hover {
+	background: #105a8c;
+}
+
+.book-now {
+	color: #3498db;
+	margin-top: 20px;
+}

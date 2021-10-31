@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
 const Footer = () => {
 	return (
-		<div className="container-fluid footer mt-4">
+		<div className="container-fluid footer">
 			<div className="d-flex p-2 justify-content-around align-items-center">
 				<div className="dark-thunder my-3">
 					<img
