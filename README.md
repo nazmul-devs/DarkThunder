@@ -8,12 +8,10 @@ A theme park or an amusement park is a place with attractions made up of rides, 
 
 ### We have best ride
 
--ROLLER COASTER
--INSANITY
--FERRIS WHEEL
--BUMPER CARS
--FERRIS WHEEL
--IMAGICAA
--VIKING SHIP
-
--
+-  ROLLER COASTER
+-  INSANITY
+-  FERRIS WHEEL
+-  BUMPER CARS
+-  FERRIS WHEEL
+-  IMAGICAA
+-  VIKING SHIP
