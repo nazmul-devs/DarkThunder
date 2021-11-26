@@ -33,7 +33,7 @@ const Login = () => {
 				className="d-flex flex-column p-3 my-5 w-sm-100 w-50 mx-auto login-form  shadow"
 				onSubmit={handleSubmit(onSubmit)}
 			>
-				<h2 className="text-center">Register here</h2>
+				<i className="fas fa-user-circle text-center fs-1 py-3"></i>
 				<input placeholder="Name" {...register("name")} />
 				<input
 					placeholder="Email"
@@ -45,7 +45,7 @@ const Login = () => {
 				/>
 				{errors.exampleRequired && <span>This field is required</span>}
 				<input
-					className="register-btn mx-auto"
+					className="register-btn mx-auto rounded"
 					type="submit"
 					value="Register"
 				/>

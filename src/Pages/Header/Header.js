@@ -7,15 +7,14 @@ import logo from "../../img/header-logo.png";
 const Header = () => {
 	const { user, logOut } = UseFirebase();
 	return (
-		<Navbar bg="dark" className="shadow text-white" expand="lg">
+		<Navbar
+			style={{ background: "#ebf8ff" }}
+			className="shadow bg-none"
+			expand="lg"
+		>
 			<Container>
 				<Navbar.Brand as={Link} to="/">
-					<img
-						className="bg-light rounded"
-						src={logo}
-						width="100"
-						alt=""
-					/>
+					<img className="shadow rounded" src={logo} width="65" alt="" />
 				</Navbar.Brand>
 				<Navbar.Toggle
 					className="bg-white text-secondary"
@@ -25,25 +24,17 @@ const Header = () => {
 					<Nav className="ms-auto">
 						{user.email && (
 							<div className="d-lg-flex align-items-center me-5">
-								<Nav.Link
-									className=" text-white fw-bold"
-									as={Link}
-									to="/orders"
-								>
+								<Nav.Link className="  fw-bold" as={Link} to="/orders">
 									My Orders
 								</Nav.Link>
 								<Nav.Link
-									className=" text-white fw-bold"
+									className="fw-bold"
 									as={Link}
 									to="/manageorders"
 								>
 									Mange Orders
 								</Nav.Link>
-								<Nav.Link
-									className=" text-white fw-bold"
-									as={Link}
-									to="/admin"
-								>
+								<Nav.Link className="  fw-bold" as={Link} to="/admin">
 									Add A New Ride
 								</Nav.Link>
 							</div>
@@ -64,12 +55,13 @@ const Header = () => {
 								</button>
 							</div>
 						) : (
-							<Nav.Link
-								as={Link}
-								className="fw-5 fw-bold text-white "
-								to="/login"
-							>
-								Login
+							<Nav.Link as={Link} to="/login">
+								<button
+									className="btn fw-bold px-3 py-1 text-white"
+									style={{ background: "#F50251" }}
+								>
+									<i className="fas fa-sign-in-alt"></i> Login
+								</button>
 							</Nav.Link>
 						)}
 					</Nav>
