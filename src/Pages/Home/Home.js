@@ -6,7 +6,7 @@ import Rides from "./Rides/Rides";
 
 const Home = () => {
 	return (
-		<div style={{ background: "#ebf8ff" }}>
+		<div style={{ background: "#ceeef8" }}>
 			<Banner />
 			<Rides />
 			<Pricing />

@@ -18,6 +18,13 @@
 	grid-row: 2 / 4;
 }
 
+.grid-contaier > img {
+	transition: 0.5s;
+	overflow: hidden;
+}
+.grid-contaier > img:hover {
+	transform: scale(1.05);
+}
 /* responsive */
 @media only screen and (max-width: 800px) {
 	.grid-contaier {

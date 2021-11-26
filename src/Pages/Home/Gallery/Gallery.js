@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import img1 from "../../../img/gallery/img-1.jpg";
 import img2 from "../../../img/gallery/img-2.jpg";
 import img3 from "../../../img/gallery/img-3.jpg";
@@ -11,8 +11,8 @@ import "./Gallery.css";
 const Gallery = () => {
 	return (
 		<Container>
-			<h2 className="main-heading">Gallery</h2>
-			<h2 className="text-center">CAPTURED MOMENTS IN DARK THUNDER</h2>
+			<h2 className="main-heading mb-0">Gallery</h2>
+			<h6 className="text-center">CAPTURED MOMENTS IN DARK THUNDER</h6>
 
 			<div className="grid-contaier">
 				<img className="h-100 w-100 item-1" src={img1} alt="" />
