@@ -25,16 +25,7 @@ img {
 }
 
 /* myOrders */
-.cancel-btn {
-	border: none;
-	padding: 7px 20px;
-	font-size: 19px;
-	font-weight: bold;
-	background: #cb4335;
-	color: #fff;
-	border-radius: 10px;
-	transition: 0.2s;
-}
+
 .cancel-btn:hover {
 	background: #b12013;
 }

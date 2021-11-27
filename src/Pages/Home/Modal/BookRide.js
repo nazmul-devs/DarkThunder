@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import UseRides from "../../../Hooks/UseRides";
 import { useForm } from "react-hook-form";
 import UseAuth from "../../../Hooks/UseAuth";
@@ -24,9 +24,20 @@ const BookRide = ({ show, handleClose, indexNo }) => {
 			userAddress: data.address,
 			status: "pending",
 		};
-		console.log(bookingItem);
-		reset();
-		handleClose();
+		fetch("https://frozen-anchorage-61563.herokuapp.com/orders", {
+			method: "POST",
+			headers: {
+				"content-type": "application/json",
+			},
+			body: JSON.stringify(bookingItem),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				alert("Ride booking successfully");
+				reset();
+				handleClose();
+			});
 	};
 	return (
 		<>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../../img/header-logo.png";
-import { Link } from "react-router-dom";
 import { Form } from "react-bootstrap";
 const Footer = () => {
 	return (
@@ -19,7 +18,7 @@ const Footer = () => {
 						<a href="https://www.facebook.com/nazmulhosens">
 							<i className="fab fa-facebook-f bg-white rounded-circle p-2 m-2"></i>
 						</a>
-						<a href="#">
+						<a href="/">
 							<i className="fab fa-twitter bg-white rounded-circle p-2 m-2"></i>
 						</a>
 						<a href="https://github.com/nazmulhosens">
@@ -29,15 +28,9 @@ const Footer = () => {
 				</div>
 				<div className="useful-links my-3 text-white">
 					<h4>Useful links</h4>
-					<a as={Link} to="/">
-						Home
-					</a>
-					<a as={Link} to="/">
-						Services
-					</a>
-					<a as={Link} to="/login">
-						Login
-					</a>
+					<a href="/">Home</a>
+					<a href="/">Services</a>
+					<a href="/login">Login</a>
 				</div>
 				<div className="contact-us text-white">
 					<h4>Contact Us</h4>

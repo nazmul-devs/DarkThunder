@@ -30,7 +30,7 @@ const UseRides = () => {
 			.then((data) => {
 				setMyOrders(data);
 			});
-	}, [remove]);
+	}, [remove, email]);
 
 	// handle delete ride from myOrder
 	const handleDelete = (id) => {
@@ -102,7 +102,7 @@ const UseRides = () => {
 				setPurchaseStatuse(data);
 				setStatus(data[0]?.status);
 			});
-	}, []);
+	}, [user.email]);
 
 	// Delete purchase data
 	const purchaseDelete = (email) => {
