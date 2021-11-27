@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Rides.css";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import UseAuth from "../../../Hooks/UseAuth";
 import UseRides from "../../../Hooks/UseRides";
 import loader from "../../../img/Fidget-spinner.gif";
+import BookRide from "../Modal/BookRide";
 
 const Rides = () => {
+	const [show, setShow] = useState(false);
+	const handleShow = () => setShow(true);
+	const handleClose = () => setShow(false);
+	const [indexNo, setIndexNo] = useState(null);
+
 	const { rides, loading } = UseRides();
 	const { user } = UseAuth();
 	if (loading) {
@@ -18,29 +24,26 @@ const Rides = () => {
 	}
 
 	// orders save to database
-	const handleBookin = (index) => {
-		const bookingRide = rides[index];
-		const bookingItem = {
-			name: bookingRide.name,
-			email: user.email,
-			img: bookingRide.img,
-			price: bookingRide.price,
-		};
 
-		fetch("https://frozen-anchorage-61563.herokuapp.com/orders", {
-			method: "POST",
-			headers: {
-				"content-type": "application/json",
-			},
-			body: JSON.stringify(bookingItem),
-		})
-			.then((res) => res.json())
-			.then((data) => {
-				alert(`${bookingRide.name} add to your order`);
-			});
+	const handleBookin = (index) => {
+		setIndexNo(index);
+		handleShow();
+
+		// fetch("https://frozen-anchorage-61563.herokuapp.com/orders", {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"content-type": "application/json",
+		// 	},
+		// 	body: JSON.stringify(bookingItem),
+		// })
+		// 	.then((res) => res.json())
+		// 	.then((data) => {
+		// 		alert(`${bookingRide.name} add to your order`);
+		// 	});
 	};
 	return (
 		<Container className="pb-5">
+			<BookRide show={show} handleClose={handleClose} indexNo={indexNo} />;
 			<h2 className="main-heading">Ride booking</h2>
 			<Row xs={1} md={2} lg={3} className="g-4">
 				{rides?.map((ride, index) => (

@@ -25,7 +25,7 @@ const Header = () => {
 						{user.email && (
 							<div className="d-lg-flex align-items-center me-5">
 								<Nav.Link className="  fw-bold" as={Link} to="/orders">
-									My Orders
+									My Booking
 								</Nav.Link>
 								<Nav.Link
 									className="fw-bold"
