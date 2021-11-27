@@ -1,31 +1,22 @@
 .footer {
-	background: #343a40;
-	width: 100%;
+	background: #909497;
 }
 .social a {
 	color: #000;
 }
 
-.useful-links h4 {
-	color: #d7b39a;
-	text-align: center;
-	font-weight: bold;
-}
 .useful-links a {
 	display: block;
 	margin: 10px 0;
 	cursor: pointer;
 }
 .contact-us h4,
-.your-msg {
-	color: #d7b39a;
+.your-msg,
+.useful-links h4 {
+	color: #14171d;
 	font-weight: bold;
 }
 .send-btn {
-	border: none;
-	background: #d7b39a;
-	padding: 10px 20px;
-	font-weight: 700;
-	color: #343a40;
-	border-radius: 10px;
+	background: #e96100;
+	color: #fff;
 }

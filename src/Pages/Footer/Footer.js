@@ -16,14 +16,14 @@ const Footer = () => {
 					/>
 					<h4 className="fw-bold text-white">Dark Thunder</h4>
 					<div className="d-flex social">
-						<a href="#">
+						<a href="https://www.facebook.com/nazmulhosens">
 							<i className="fab fa-facebook-f bg-white rounded-circle p-2 m-2"></i>
 						</a>
 						<a href="#">
 							<i className="fab fa-twitter bg-white rounded-circle p-2 m-2"></i>
 						</a>
-						<a href="#">
-							<i className="fab fa-instagram  bg-white rounded-circle p-2 m-2"></i>
+						<a href="https://github.com/nazmulhosens">
+							<i className="fab fa-github  bg-white rounded-circle p-2 m-2"></i>
 						</a>
 					</div>
 				</div>
@@ -47,24 +47,20 @@ const Footer = () => {
 					<p>(+880)1804573272</p>
 				</div>
 				<Form>
-					<h4 className="your-msg">Your message</h4>
-					<Form.Group className="mb-3" controlId="formBasicEmail">
+					<h4 className="your-msg mt-3">Your message</h4>
+					<Form.Group className="my-1" controlId="formBasicEmail">
 						<Form.Control type="email" placeholder="Enter email" />
 					</Form.Group>
 
-					<Form.Group className="mb-3" controlId="formBasicPassword">
-						<textarea
-							rows="3"
-							className="w-100 rounded px-3"
-							placeholder="Your Message"
-						></textarea>
+					<Form.Group className="my-1 " controlId="formBasicPassword">
+						<Form.Control type="text" placeholder="Your message" />
 					</Form.Group>
 
-					<button className="send-btn">Send</button>
+					<button className="send-btn btn px-3">Send</button>
 				</Form>
 			</div>
 			<hr className="bg-white" />
-			<p className="text-white m-0 p-2">
+			<p className=" m-0 p-2 text-center">
 				© 2022 Your Company. Designed By Dark-thunder.
 			</p>
 		</div>

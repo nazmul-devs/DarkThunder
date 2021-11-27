@@ -8,7 +8,7 @@ const Header = () => {
 	const { user, logOut } = UseFirebase();
 	return (
 		<Navbar
-			style={{ background: "#ebf8ff" }}
+			style={{ background: "#F2F3F4" }}
 			className="shadow bg-none"
 			expand="lg"
 		>
