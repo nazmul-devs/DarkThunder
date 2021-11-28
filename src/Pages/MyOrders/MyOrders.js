@@ -51,10 +51,14 @@ const MyOrders = () => {
 									height="160"
 								/>
 								<Card.Body>
-									<div className="text-uppercase text-white text-center my-2 fw-bold d-flex justify-content-around align-items-center">
+									<h6 className="text-white text-center py-2">
+										Status: {myOrder.status}
+									</h6>
+									<div className="text-uppercase text-white text-center fw-bold d-flex justify-content-around align-items-center">
 										<h5 className="text-center fw-bold">
 											{myOrder.rideName}
 										</h5>
+
 										<button
 											onClick={() => handleDelete(myOrder._id)}
 											className=" btn px-3 text-white cancel-btn"

@@ -40,29 +40,31 @@ const ManageOrders = () => {
 								<Card style={{ background: "#2E4053" }}>
 									<Card.Img
 										variant="top"
-										src={order.img}
+										src={order.rideImg}
 										height="250"
 									/>
 									<Card.Body>
-										<div className="d-flex justify-content-around align-items-center">
-											<div className="text-uppercase text-white  my-2">
-												<h2>{order.name}</h2>
+										<div className="text-uppercase text-white  my-2">
+											<h2>{order.rideName}</h2>
 
-												<p>Email : {order.email}</p>
-											</div>
-											<div>
-												<button className="btn btn-danger me-2">
-													Update
-												</button>
-												<button
-													onClick={() =>
-														manageOrderDelete(order._id)
-													}
-													className="btn btn-danger"
-												>
-													X
-												</button>
-											</div>
+											<p>Email : {order.userEmail}</p>
+										</div>
+										<div>
+											<button className="btn btn-danger me-2">
+												Update
+											</button>
+											<button
+												onClick={() => manageOrderDelete(order._id)}
+												className="btn btn-danger"
+											>
+												X
+											</button>
+											<button
+												onClick={() => approveHandle(order.email)}
+												className="btn btn-primary me-3"
+											>
+												Approve
+											</button>
 										</div>
 									</Card.Body>
 								</Card>
@@ -86,12 +88,7 @@ const ManageOrders = () => {
 										</p>
 									))}
 								</div>
-								<button
-									onClick={() => approveHandle(prch.email)}
-									className="btn btn-primary me-3"
-								>
-									Approve
-								</button>
+
 								<button
 									onClick={() => purchaseDelete(prch.email)}
 									className="btn btn-danger"
