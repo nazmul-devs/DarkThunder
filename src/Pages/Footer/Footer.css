@@ -6,9 +6,12 @@
 }
 
 .useful-links a {
-	display: block;
-	margin: 10px 0;
+	color: #000026;
 	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	margin: 10px 0;
+	text-decoration: none;
 }
 .contact-us h4,
 .your-msg,

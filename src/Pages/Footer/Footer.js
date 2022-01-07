@@ -32,7 +32,7 @@ const Footer = () => {
 					<a href="/">Services</a>
 					<a href="/login">Login</a>
 				</div>
-				<div className="contact-us text-white">
+				<div className="contact-us text-scondary">
 					<h4>Contact Us</h4>
 					<p>Banani blcok-D, Road-15 Dhaka</p>
 					<p>Darkthunder007@gmail.com</p>
