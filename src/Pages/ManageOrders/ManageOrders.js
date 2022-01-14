@@ -3,13 +3,7 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import UseRides from "../../Hooks/UseRides";
 
 const ManageOrders = () => {
-	const {
-		allOrders,
-		manageOrderDelete,
-		purchase,
-		purchaseStatuse,
-		purchaseDelete,
-	} = UseRides();
+	const { allOrders, manageOrderDelete, purchaseStatuse } = UseRides();
 
 	// Set approve
 	const approveHandle = (email) => {
@@ -28,77 +22,47 @@ const ManageOrders = () => {
 	};
 
 	return (
-		<Container>
-			<Row className="mb-4">
-				<Col>
-					<Row xs={1} className="g-4 mt-3">
-						<h2 className="main-heading">
-							Total booking rides {allOrders.length}
-						</h2>
-						{allOrders?.map((order, index) => (
-							<Col key={order._id}>
-								<Card style={{ background: "#2E4053" }}>
-									<Card.Img
-										variant="top"
-										src={order.rideImg}
-										height="250"
-									/>
-									<Card.Body>
-										<div className="text-uppercase text-white  my-2">
-											<h2>{order.rideName}</h2>
+		<Container className="py-4">
+			<h2 className="main-heading" style={{ color: "#116466" }}>
+				Total booking rides {allOrders.length}
+			</h2>
+			<Row xs={1} md={2} lg={3} className="g-4 mt-3">
+				{allOrders?.map((order, index) => (
+					<Col key={order._id}>
+						<Card style={{ background: "#116466" }}>
+							<Card.Img variant="top" src={order.rideImg} height="200" />
+							<Card.Body>
+								<div className="text-white">
+									<h5
+										className="text-uppercase "
+										style={{ fontWeight: "600" }}
+									>
+										{order.rideName}
+									</h5>
 
-											<p>Email : {order.userEmail}</p>
-										</div>
-										<div>
-											<button className="btn btn-danger me-2">
-												Update
-											</button>
-											<button
-												onClick={() => manageOrderDelete(order._id)}
-												className="btn btn-danger"
-											>
-												X
-											</button>
-											<button
-												onClick={() => approveHandle(order.email)}
-												className="btn btn-primary me-3"
-											>
-												Approve
-											</button>
-										</div>
-									</Card.Body>
-								</Card>
-							</Col>
-						))}
-					</Row>
-				</Col>
-				<Col>
-					<Row className=" text-center ">
-						<h2 className="main-heading">
-							Ordered user {purchase.length}
-						</h2>
-						{purchase?.map((prch) => (
-							<Col key={prch._id} className="shadow p-4 m-5 rounded">
-								<h5 className="fw-bold">Name : {prch.name}</h5>
-								<h5 className="fw-bold">Email : {prch.email}</h5>
-								<div className="rides">
-									{prch.rides?.map((ride, index) => (
-										<p key={ride}>
-											{index + 1} : {ride}
-										</p>
-									))}
+									<p>Name : {order.userName}</p>
+									<p>Email : {order.userEmail}</p>
+									<p>Status : {order.status}</p>
 								</div>
-
-								<button
-									onClick={() => purchaseDelete(prch.email)}
-									className="btn btn-danger"
-								>
-									Delete
-								</button>
-							</Col>
-						))}
-					</Row>
-				</Col>
+								<div>
+									<button className="btn btn-danger">Update</button>
+									<button
+										onClick={() => manageOrderDelete(order._id)}
+										className="btn btn-danger mx-4"
+									>
+										X
+									</button>
+									<button
+										onClick={() => approveHandle(order.email)}
+										className="btn btn-primary"
+									>
+										Approve
+									</button>
+								</div>
+							</Card.Body>
+						</Card>
+					</Col>
+				))}
 			</Row>
 		</Container>
 	);

@@ -1,9 +1,9 @@
 .pricing p {
-	color: #6e7e8d;
+	color: #189092;
 }
 /* check mark color */
 .pricing .fas {
-	color: #3498db;
+	color: #116466;
 	font-weight: 700;
 	margin-right: 10px;
 }
@@ -21,7 +21,7 @@
 	padding-right: 15px;
 }
 .tickit-package > h5 {
-	color: #3498db;
+	color: #116466;
 	font-weight: bold;
 }
 .tickit-package > h3 {
@@ -51,14 +51,14 @@
 
 /* basic package */
 .basic-package {
-	background: #3498db;
+	background: #116466;
 	padding: 20px;
 	width: 450px;
 	height: 450px;
 }
 
 .basic-package .pricing > h3 {
-	color: #1c2833;
+	color: #182e43;
 	font-weight: 700;
 }
 .basic-package p {
@@ -73,7 +73,7 @@
 .all-package,
 .book-now-btn {
 	color: #fff;
-	background: #3498db;
+	background: #116466;
 	margin-top: 15px;
 }
 .all-package:hover,
@@ -82,6 +82,6 @@
 }
 
 .book-now {
-	color: #3498db;
+	color: #116466;
 	margin-top: 20px;
 }

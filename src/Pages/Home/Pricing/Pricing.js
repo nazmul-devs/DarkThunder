@@ -4,13 +4,16 @@ import "./Pricing.css";
 
 const Pricing = () => {
 	return (
-		<div style={{ background: "white" }} className="py-3">
+		<div style={{ background: "#d1e8e2" }} className="py-5">
 			<Container>
-				<h2 className="main-heading">Pricing</h2>
+				<h2 className="main-heading" style={{ color: "#116466" }}>
+					Pricing
+				</h2>
 				<Row className="pricing d-md-flex align-items-center justify-content-around pb-5">
 					<Col className="tickit-package">
-						<h5>TICKET PACKAGES</h5>
-						<h3>CHOOSE THE BEST PACKAGES FOR YOUR FAMILY</h3>
+						<h4 className="fw-bold">
+							CHOOSE THE BEST PACKAGES FOR YOUR FAMILY
+						</h4>
 						<p>
 							{" "}
 							For Picnic package eligibility, a group should be of

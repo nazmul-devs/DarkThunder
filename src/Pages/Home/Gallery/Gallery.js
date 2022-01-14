@@ -10,9 +10,11 @@ import "./Gallery.css";
 
 const Gallery = () => {
 	return (
-		<Container>
+		<Container className="py-4">
 			<h2 className="main-heading mb-0">Gallery</h2>
-			<h6 className="text-center">CAPTURED MOMENTS IN DARK THUNDER</h6>
+			<h6 className="text-center py-3" style={{ color: "#d1e8e2" }}>
+				CAPTURED MOMENTS IN DARK THUNDER
+			</h6>
 
 			<div className="grid-contaier">
 				<img className="h-100 w-100 item-1" src={img1} alt="" />

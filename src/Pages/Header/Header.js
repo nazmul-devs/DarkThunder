@@ -8,13 +8,19 @@ const Header = () => {
 	const { user, logOut } = UseFirebase();
 	return (
 		<Navbar
-			style={{ background: "#F2F3F4" }}
+			style={{ background: "#116466", height: "60px" }}
 			className="shadow bg-none"
 			expand="lg"
 		>
 			<Container>
 				<Navbar.Brand as={Link} to="/">
-					<img className="shadow rounded" src={logo} width="65" alt="" />
+					<img
+						className="shadow rounded-circle"
+						style={{ backgroundColor: "#fff", height: "50px" }}
+						src={logo}
+						width="50"
+						alt=""
+					/>
 				</Navbar.Brand>
 				<Navbar.Toggle
 					className="bg-white text-secondary"
@@ -24,32 +30,52 @@ const Header = () => {
 					<Nav className="ms-auto">
 						{user.email && (
 							<div className="d-lg-flex align-items-center me-5">
-								<Nav.Link className="  fw-bold" as={Link} to="/orders">
+								<Nav.Link
+									style={{
+										fontWeight: "600",
+										fontSize: "16px",
+										color: "#d1e8e2",
+									}}
+									as={Link}
+									to="/orders"
+								>
 									My Booking
 								</Nav.Link>
 								<Nav.Link
-									className="fw-bold"
+									style={{
+										fontWeight: "600",
+										fontSize: "16px",
+										color: "#d1e8e2",
+									}}
 									as={Link}
 									to="/manageorders"
 								>
 									Mange Orders
 								</Nav.Link>
-								<Nav.Link className="  fw-bold" as={Link} to="/admin">
+								<Nav.Link
+									style={{
+										fontWeight: "600",
+										fontSize: "16px",
+										color: "#d1e8e2",
+									}}
+									as={Link}
+									to="/admin"
+								>
 									Add A New Ride
 								</Nav.Link>
 							</div>
 						)}
 						{user.email ? (
-							<div className=" ms-5 ms-auto">
+							<div className=" ms-4 ms-auto">
 								<img
 									src={user?.photoURL}
 									className="rounded-circle"
-									width="55"
+									width="50"
 									alt=""
 								/>
 								<button
 									onClick={logOut}
-									className="btn btn-light shadow px-4 mx-2"
+									className="btn btn-light shadow px-4 mx-3"
 								>
 									Logout
 								</button>

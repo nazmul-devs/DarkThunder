@@ -1,15 +1,16 @@
 .main-heading {
 	text-align: center;
-	font-size: 50px;
-	font-weight: 700;
-	margin: 30px 0;
-	color: #212f3d;
+	font-weight: 600;
+	margin-bottom: 15px;
+	color: #d1e8e2;
 }
 
 .booking-btn {
-	background: #f3a200;
-	transition: 0.2s;
+	background: #116466;
+	border-bottom: 3px solid #043b3c;
+	transition: 0.3s;
 }
 .booking-btn:hover {
-	background: #aa7200;
+	background: #0b4f50;
+	transform: skew(4deg);
 }

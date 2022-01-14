@@ -24,12 +24,14 @@ const AddRides = () => {
 	};
 	return (
 		<Container>
-			<div className="rides-add-form rounded py-5">
+			<div className="rides-add-form  py-5">
 				<form
-					className="d-flex flex-column p-3 bg-white mx-auto event-add-form  shadow rounded"
+					className="d-flex flex-column p-3 bg-white mx-auto event-add-form border rounded"
 					onSubmit={handleSubmit(onSubmit)}
 				>
-					<h2 className="main-heading">Add a new ride</h2>
+					<h2 className="main-heading" style={{ color: "#116466" }}>
+						Add a new ride
+					</h2>
 					<input placeholder="Name" {...register("name")} />
 
 					<textarea placeholder="Description" {...register("des")} />

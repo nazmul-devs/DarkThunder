@@ -1,8 +1,11 @@
 .footer {
-	background: #909497;
+	background: #d1e8e2;
 }
 .social a {
-	color: #000;
+	color: #d1e8e2;
+}
+.social .fab {
+	background: #116466;
 }
 
 .useful-links a {
@@ -16,10 +19,12 @@
 .contact-us h4,
 .your-msg,
 .useful-links h4 {
-	color: #14171d;
+	color: #116466;
 	font-weight: bold;
 }
 .send-btn {
-	background: #e96100;
+	background: #116466;
+	border-bottom: 2px solid gray;
+	margin-top: 10px;
 	color: #fff;
 }

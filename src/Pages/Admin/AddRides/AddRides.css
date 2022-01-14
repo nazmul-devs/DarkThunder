@@ -1,13 +1,10 @@
-.rides-add {
-	background: #34495e;
-}
 .rides-add-form input,
 textarea {
 	margin: 20px;
 	padding: 10px 20px;
 	border-radius: 7px;
-	border: none;
-	box-shadow: 1px 1px 8px #34495e74;
+	border: 1px solid #116466;
+	border-bottom: 2px solid #116466;
 }
 .rides-add-form form {
 	max-width: 500px;
@@ -24,9 +21,9 @@ textarea {
 .add-ride-btn {
 	font-weight: bold;
 	color: #fff;
-	background: #34495e;
+	background: #116466;
 	transition: 0.2s;
 }
 .add-ride-btn:hover {
-	background: #2e4053;
+	background: #0c5052;
 }

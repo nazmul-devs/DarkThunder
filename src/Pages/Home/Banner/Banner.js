@@ -14,6 +14,15 @@ const Banner = () => {
 					src={banner1}
 					alt="First slide"
 				/>
+				<Carousel.Caption className="w-50 pb-5">
+					<h3>FERRIS WHEEL</h3>
+					<p className="py-3">
+						If you can imagine the delight of visiting a theme park where
+						lasting memories are made, we envision 'Sky' will sometimes
+						feel like that.
+					</p>
+					<button className="btn btn-success">Explore more</button>
+				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
 				<img

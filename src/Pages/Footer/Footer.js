@@ -13,16 +13,18 @@ const Footer = () => {
 						src={logo}
 						alt=""
 					/>
-					<h4 className="fw-bold text-white">Dark Thunder</h4>
+					<h4 className="fw-bold" style={{ color: "#116466" }}>
+						Dark Thunder
+					</h4>
 					<div className="d-flex social">
 						<a href="https://www.facebook.com/nazmulhosens">
-							<i className="fab fa-facebook-f bg-white rounded-circle p-2 m-2"></i>
+							<i className="fab fa-facebook-f rounded-circle p-2 m-2"></i>
 						</a>
 						<a href="/">
-							<i className="fab fa-twitter bg-white rounded-circle p-2 m-2"></i>
+							<i className="fab fa-twitter  rounded-circle p-2 m-2"></i>
 						</a>
 						<a href="https://github.com/nazmulhosens">
-							<i className="fab fa-github  bg-white rounded-circle p-2 m-2"></i>
+							<i className="fab fa-github  rounded-circle p-2 m-2"></i>
 						</a>
 					</div>
 				</div>
@@ -52,8 +54,11 @@ const Footer = () => {
 					<button className="send-btn btn px-3">Send</button>
 				</Form>
 			</div>
-			<hr className="bg-white" />
-			<p className=" m-0 p-2 text-center">
+			<hr />
+			<p
+				className="text-center pb-2 m-0"
+				style={{ color: "#116466", fontWeight: "600" }}
+			>
 				© 2022 Your Company. Designed By Dark-thunder.
 			</p>
 		</div>

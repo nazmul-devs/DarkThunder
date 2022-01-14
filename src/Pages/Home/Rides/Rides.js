@@ -50,12 +50,15 @@ const Rides = () => {
 					<Col key={ride._id}>
 						<Card
 							className="border-0 shadow"
-							style={{ minHeight: "500px" }}
+							style={{ minHeight: "500px", backgroundColor: "#d1e8e2" }}
 						>
 							<Card.Img variant="top" src={ride.img} height="250" />
-							<Card.Body>
+							<Card.Body className="border">
 								<div className="text-uppercase text-center my-2">
-									<h4 className="text-center fs-5 fw-bold">
+									<h4
+										className="text-center fs-6 fw-bold"
+										style={{ color: "#116466" }}
+									>
 										{ride.name}
 									</h4>
 									<p
@@ -69,7 +72,12 @@ const Rides = () => {
 									</p>
 								</div>
 								<div className="d-flex justify-content-between align-items-center my-2">
-									<h5 className="fs-5">Price : ${ride.price}</h5>
+									<h5
+										className="fs-6 fw-bold"
+										style={{ color: "#116466" }}
+									>
+										Price : ${ride.price}
+									</h5>
 									{user.email ? (
 										<button
 											onClick={() => handleBookin(index)}
